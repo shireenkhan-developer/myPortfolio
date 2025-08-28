@@ -1,5 +1,5 @@
 <h1 align="center">
-  iamtayyab.com
+  iamshireenkhan.com
 </h1>
 <p align="center">
   My portfolio website built with <a href="https://nextjs.org" target="_blank">Next.js</a>, <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, <a href="https://www.radix-ui.com" target="_blank">Radix UI</a> and deployed on <a href="https://www.vercel.com/" target="_blank">Vercel</a>.⚡
@@ -14,11 +14,5 @@
 - [Lucide Icons](https://lucide.dev) - Beautifully simple, pixel-perfect icons
 - [Next Themes](https://github.com/pacocoursey/next-themes) - An abstraction for themes (Dark + Light Mode).
 
-## Running Locally
 
-```bash
-$ git clone https://github.com/meetayyab/iamtayyab.com.git
-$ cd iamtayyab.com
-$ npm install
-$ npm run dev
-```
+
