@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { mergeClasses } from '@/lib/utils';
 
 const iconButtonVariants = cva(
-  'flex justify-center items-center hover:bg-gray-100 active:bg-gray-200 rounded-lg p-1.5 transition-colors duration-200 [&_svg]:stroke-gray-600 [&_svg]:hover:stroke-gray-700',
+  'flex justify-center items-center hover:bg-stellar-indigo/10 active:bg-stellar-indigo/20 rounded-lg p-1.5 transition-all duration-200 [&_svg]:stroke-gray-700 [&_svg]:hover:stroke-stellar-indigo border border-transparent hover:border-stellar-indigo/30 hover:shadow-md hover:shadow-stellar-indigo/20',
   {
     variants: {
       size: {
@@ -51,7 +51,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       >
         {children}
         {showTooltip && tooltipText.length > 0 && (
-          <span className="absolute -top-8 rounded-lg bg-gray-200 px-2 py-1 text-sm">
+          <span className="absolute -top-8 rounded-lg bg-cosmic-100/95 backdrop-blur-md border border-stellar-indigo/40 px-2 py-1 text-sm text-stellar-indigo shadow-lg shadow-stellar-indigo/30">
             {tooltipText}
           </span>
         )}

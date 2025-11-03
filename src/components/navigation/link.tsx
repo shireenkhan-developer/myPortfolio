@@ -31,9 +31,9 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         className={mergeClasses(
           noCustomization
             ? ''
-            : 'text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600',
+            : 'text-base font-medium text-gray-700 transition-all hover:text-stellar-indigo active:text-gray-600 glow-on-hover',
           withUnderline
-            ? 'underline underline-offset-4 transition-all hover:text-gray-900 active:text-gray-600'
+            ? 'underline underline-offset-4 transition-all hover:text-stellar-indigo active:text-gray-600'
             : '',
           className
         )}

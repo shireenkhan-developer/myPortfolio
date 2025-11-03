@@ -13,20 +13,21 @@ import { NAV_LINKS } from '@/lib/data';
 import { mergeClasses } from '@/lib/utils';
 import useWindowSize from '@/hooks/use-window-size';
 import useScroll from '@/hooks/use-scroll';
+import useActiveSection from '@/hooks/use-active-section';
 import Link from '@/components/navigation/link';
-import ThemeSwitcher from '@/components/general/theme-switcher';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
 
 const Logo = () => (
-  <Typography variant="h3" className="font-bold">
-    {'<MT />'}
+  <Typography variant="h3" className="font-bold bg-gradient-to-r from-stellar-indigo via-stellar-purple to-stellar-violet bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(79,70,229,0.5)]">
+    {'<SK />'}
   </Typography>
 );
 
 const Header = () => {
   const scrolled = useScroll(40);
+  const activeSection = useActiveSection();
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
 
@@ -40,8 +41,8 @@ const Header = () => {
   return (
     <header
       className={mergeClasses(
-        'sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100',
-        scrolled ? 'bg-gray/50 backdrop-blur-xl md:border-gray-100' : ''
+        'sticky top-0 z-30 w-full border-b border-transparent bg-cosmic-100/30 backdrop-blur-lg max-md:border-stellar-indigo/20',
+        scrolled ? 'bg-cosmic-100/60 backdrop-blur-xl md:border-stellar-indigo/30 shadow-lg shadow-stellar-indigo/10' : ''
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8">
@@ -50,15 +51,30 @@ const Header = () => {
         </Link>
         <div className="hidden items-center gap-6 md:flex">
           <ul className="flex list-none items-center gap-6">
-            {NAV_LINKS.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link, index) => {
+              const isActive = activeSection === link.href.replace('#', '');
+              return (
+                <li key={index}>
+                  <Link 
+                    href={link.href}
+                    className={mergeClasses(
+                      'relative px-3 py-1 rounded-lg transition-all duration-300 text-white/90',
+                      isActive 
+                        ? 'text-white font-semibold' 
+                        : 'hover:text-white'
+                    )}
+                  >
+                    {link.label}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/50 rounded-full"></span>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
-          <div className="h-6 w-0.5 bg-gray-100"></div>
+          <div className="h-6 w-0.5 bg-white/30"></div>
           <div className="flex items-center gap-4">
-            <ThemeSwitcher />
             <DownloadCV />
           </div>
         </div>
@@ -70,7 +86,7 @@ const Header = () => {
             </IconButton>
           </DrawerTrigger>
           <DrawerContent>
-            <div className="flex items-center justify-between border-b border-gray-100 p-4">
+            <div className="flex items-center justify-between border-b border-stellar-indigo/20 p-4">
               <Logo />
               <DrawerClose asChild>
                 <IconButton>
@@ -78,12 +94,13 @@ const Header = () => {
                 </IconButton>
               </DrawerClose>
             </div>
-            <div className="border-b border-gray-100 p-4">
+            <div className="border-b border-white/20 p-4">
               <ul className="flex list-none flex-col gap-4">
                 {NAV_LINKS.map((link, index) => (
                   <li key={index}>
                     <Link
                       href={link.href}
+                      className="text-white/90 hover:text-white transition-colors"
                       onClick={() => {
                         const timeoutId = setTimeout(() => {
                           setIsOpen(false);
@@ -98,10 +115,6 @@ const Header = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-4 p-4">
-              <div className="flex items-center justify-between">
-                <Typography>Switch Theme</Typography>
-                <ThemeSwitcher />
-              </div>
               <DownloadCV />
             </div>
           </DrawerContent>

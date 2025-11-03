@@ -1,12 +1,11 @@
-const { default: dynamic } = require('next/dynamic')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    staleTimes: {
-      dynamic: 0,
-    }
-  }
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+    };
+    return config;
+  },
 }
 
 module.exports = nextConfig

@@ -12,6 +12,7 @@ const ImageWrapper = ({
   srcForDarkMode,
   src,
   alt,
+  style,
   ...props
 }: ImageWrapperProps) => {
   // Ref :: https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
@@ -28,7 +29,13 @@ const ImageWrapper = ({
 
   const finalSrc = theme === 'dark' ? srcForDarkMode || src : src;
 
-  return <Image src={finalSrc!} alt={alt} {...props} />;
+  // Ensure aspect ratio is maintained when width/height are provided
+  // If style is provided, merge it; otherwise ensure height: auto for proper aspect ratio
+  const imageStyle = props.width && props.height && !style?.height
+    ? { ...style, height: 'auto' }
+    : style;
+
+  return <Image src={finalSrc!} alt={alt} style={imageStyle} {...props} />;
 };
 
 export default ImageWrapper;

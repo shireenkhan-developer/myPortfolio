@@ -15,7 +15,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={mergeClasses(
-          'inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-1.5 font-medium text-gray-50 transition-colors duration-200 hover:bg-gray-700 active:bg-gray-800',
+          'inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-stellar-indigo via-stellar-purple to-stellar-violet px-4 py-1.5 font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-stellar-indigo/40 hover:scale-105 active:scale-95 border border-stellar-indigo/30',
           className
         )}
         ref={ref}

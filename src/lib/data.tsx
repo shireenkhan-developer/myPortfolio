@@ -1,49 +1,51 @@
 import { Github, Twitter, Linkedin } from 'lucide-react';
 
-import LogoJavascript from '/public/images/logos/icon-javascript.svg';
-import LogoTypescript from '/public/images/logos/icon-typescript.svg';
-import LogoReact from '/public/images/logos/icon-react.svg';
-import LogoAngular from '/public/images/logos/icon-angular.svg';
-import LogoMySQL from '/public/images/logos/icon-mysql.svg';
-import LogoDocker from '/public/images/logos/icon-docker.svg';
-import LogoStripe from '/public/images/logos/icon-stripe.svg';
-import LogoAWS from '/public/images/logos/icon-aws.svg';
-import LogoBootstrap from '/public/images/logos/icon-bootstrap.svg';
-import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
-import LogoExpress from '/public/images/logos/icon-express.svg';
-import LogoExpressLight from '/public/images/logos/icon-express-light.svg';
-import LogoPostgreSQL from '/public/images/logos/icon-postgresql.svg';
-import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
-import LogoSass from '/public/images/logos/icon-sass.svg';
-import LogoTailwindcss from '/public/images/logos/icon-tailwindcss.svg';
-import LogoGit from '/public/images/logos/icon-git.svg';
+// For SVG files in public folder, we use string paths
+const LogoJavascript = '/images/logos/icon-javascript.svg';
+const LogoTypescript = '/images/logos/icon-typescript.svg';
+const LogoReact = '/images/logos/icon-react.svg';
+const LogoAngular = '/images/logos/icon-angular.svg';
+const LogoMySQL = '/images/logos/icon-mysql.svg';
+const LogoDocker = '/images/logos/icon-docker.svg';
+const LogoStripe = '/images/logos/icon-stripe.svg';
+const LogoN8N = '/images/logos/icon-n8n.png';
+const LogoBootstrap = '/images/logos/icon-bootstrap.svg';
+const LogoNodejs = '/images/logos/icon-nodejs.svg';
+const LogoExpress = '/images/logos/icon-express.svg';
+const LogoExpressLight = '/images/logos/icon-express-light.svg';
+const LogoPostgreSQL = '/images/logos/icon-postgresql.svg';
+const LogoMongoDB = '/images/logos/icon-mongodb.svg';
+const LogoSass = '/images/logos/icon-sass.svg';
+const LogoTailwindcss = '/images/logos/icon-tailwindcss.svg';
+const LogoGit = '/images/logos/icon-git.svg';
+const LogoNextjs = '/images/logos/icon-nextjs.svg';
+const LogoSwiftUI = '/images/logos/icon-swiftui.svg';
 
-import LogoEfani from '/public/images/logos/logo-efani.svg';
-import LogoEfaniDark from '/public/images/logos/logo-efani-dark.svg';
-import LogoInqiludioDigital from '/public/images/logos/logo-inqiludio-digital.svg';
-import LogoInqiludioDigitalDark from '/public/images/logos/logo-inqiludio-digital-dark.svg';
+const LogoEfani = '/images/logos/logo-efani.png';
+const LogoEfaniDark = '/images/logos/logo-efani-dark.svg';
+const LogoTeresol = '/images/logos/logo-teresol.png';
+const LogoQLU = '/images/logos/logo-qlu-ai.png';
+const LogoContract = '/images/logos/logo-contract-pk.png';
+const LogoFFBL = '/images/logos/logo-ffbl.png';
 
-import ProjectTalkMotion from '/public/images/project-talkmotion.jpg';
-import ProjectWAF from '/public/images/project-waf.jpg';
-import ProjectBlackSeal from '/public/images/project-blackseal.png';
-import ProjectVisaBookings from '/public/images/project-visabookings.png';
-import ProjectWorkConnect from '/public/images/project-workconnect.png';
-
-import AvatarOsama from '/public/images/avatar-osama-yawar.png';
-import AvatarVincent from '/public/images/avatar-vincent-ochs.jpeg';
-import AvatarGabriel from '/public/images/avatar-gabriel-tannous.jpeg';
+const ProjectSoundOfSilence = '/images/project-sos.png';
+const ProjectDrowsiness = '/images/project-drowsiness.png';
+const ProjectBlackSeal = '/images/project-bsp.png';
+const ProjectLawBot = '/images/project-lawbot.png';
+const ProjectGoogleAds = '/images/project-googleads.png';
+const ProjectAIContentWriter = '/images/project-ai-content-writer.png';
 
 import {
   ExperienceDetails,
   ProjectDetails,
   TechDetails,
-  TestimonialDetails,
 } from '@/lib/types';
 
 export const EXTERNAL_LINKS = {
-  GITHUB: 'https://github.com/meetayyab',
-  GITHUB_REPO: 'https://github.com/meetayyab/iamtayyab.com',
-  TWITTER: 'https://twitter.com/Tayyab_3411',
+  GITHUB: 'https://github.com/shireenkhan-developer',
+  GITHUB_REPO: 'https://github.com/shireenkhan-developer',
+  LINKEDIN: 'https://www.linkedin.com/in/shireen-khan1/',
+  EMAIL: 'mailto:shireenkhan.412@gmail.com',
 };
 
 export const NAV_LINKS = [
@@ -52,12 +54,16 @@ export const NAV_LINKS = [
     href: '#about',
   },
   {
-    label: 'Work',
-    href: '#work',
+    label: 'Education',
+    href: '#education',
   },
   {
-    label: 'Testimonials',
-    href: '#testimonials',
+    label: 'Experience',
+    href: '#experience',
+  },
+  {
+    label: 'Projects',
+    href: '#projects',
   },
   {
     label: 'Contact',
@@ -68,15 +74,11 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     icon: Github,
-    url: 'https://github.com/muhammadtayyab3411',
-  },
-  {
-    icon: Twitter,
-    url: 'https://twitter.com/Tayyab_3411',
+    url: 'https://github.com/shireenkhan-developer',
   },
   {
     icon: Linkedin,
-    url: 'https://www.linkedin.com/in/immtayyab',
+    url: 'https://www.linkedin.com/in/shireen-khan1/',
   },
 ];
 
@@ -95,6 +97,11 @@ export const TECHNOLOGIES: TechDetails[] = [
     label: 'React',
     logo: LogoReact,
     url: 'https://react.dev/',
+  },
+  {
+    label: 'Next.js',
+    logo: LogoNextjs,
+    url: 'https://nextjs.org/',
   },
   {
     label: 'Angular',
@@ -118,11 +125,6 @@ export const TECHNOLOGIES: TechDetails[] = [
     url: 'https://www.postgresql.org/',
   },
   {
-    label: 'MySQL',
-    logo: LogoMySQL,
-    url: 'https://www.mysql.com/',
-  },
-  {
     label: 'MongoDB',
     logo: LogoMongoDB,
     url: 'https://www.mongodb.com/',
@@ -143,14 +145,14 @@ export const TECHNOLOGIES: TechDetails[] = [
     url: 'https://stripe.com/',
   },
   {
-    label: 'AWS',
-    logo: LogoAWS,
-    url: 'https://aws.amazon.com/',
+    label: 'N8N',
+    logo: LogoN8N,
+    url: 'https://n8n.io/',
   },
   {
-    label: 'Sass/Scss',
-    logo: LogoSass,
-    url: 'https://sass-lang.com/',
+    label: 'SwiftUI',
+    logo: LogoSwiftUI,
+    url: 'https://developer.apple.com/swiftui/',
   },
   {
     label: 'Tailwindcss',
@@ -167,56 +169,116 @@ export const TECHNOLOGIES: TechDetails[] = [
 export const EXPERIENCES: ExperienceDetails[] = [
   {
     logo: LogoEfani,
-    darkModeLogo: LogoEfaniDark, 
-    logoAlt: 'Efani logo',
+    darkModeLogo: LogoEfani,
+    logoAlt: 'Efani',
     position: 'Full Stack Engineer',
-    startDate: new Date(2023, 3),
+    startDate: new Date(2024, 2), // March 2024
     currentlyWorkHere: true,
+    technologies: ['Node.js', 'Angular', 'Express.js', 'PostgreSQL', 'n8n', 'GCP', 'BigQuery', 'Cloud Run', 'SendGrid', 'Stripe', 'Heroku', 'Atom SDK', 'SwiftUI', 'Xcode'],
     summary: [
-      'Built a custom subscription system to replace Stripe Subscriptions, supporting flexible billing intervals, trials, and auto-retry. This saved the company over $70,000 annually in fees.',
-      'Created an internal support dashboard combining billing, account, and line management tools. This helped reduce support tickets by 90% and sped up issue resolution.',
-      'Developed an affiliate dashboard that tracks orders and commissions in real time, leading to a 30% increase in affiliate sales.',
-      'Automated sales call analysis by using OpenPhone transcripts with a HuggingFace AI model. Reduced monthly AI costs from $28,800 to about $200 and improved sales process compliance.',
-      'Led a small cross-functional team of developers, designers, and testers. Took ownership of task planning, code reviews, and mentoring junior engineers.'
+      'Developed and maintained full-stack features across the PEAN stack, ensuring scalability, performance, and security through OWASP/BurpSuite testing, encrypted data handling, and secure API implementations.',
+      'Designed and deployed a custom subscription and coupon system replacing Stripe, reducing costs and improving flexibility, while automating email workflows via SendGrid and Zoho, increasing engagement by 25%.',
+      'Automated Google Ads workflows via n8n by integrating BigQuery data with LLM-powered analysis, reducing manual effort by 90% and enabling real-time campaign optimization.',
+      'Enhanced checkout and tracking systems, improving conversions by 10%, adding crypto payment support, and increasing event accuracy by 40% through server-side GTM and Meta CAPI integration.',
+      'Learned SwiftUI from scratch and contributed to the Efani iOS app by implementing In-App Purchases and other core app features, fixing bugs, and improving performance; additionally, mentored junior developers, led task planning, and conducted code reviews to maintain high engineering standards.',
     ],
   },
   {
-    logo: LogoInqiludioDigital,
-    darkModeLogo: LogoInqiludioDigitalDark,
-    logoAlt: 'Inqiludio Digital logo',
-    position: 'Software Engineer',
-    startDate: new Date(2022, 8),
-    endDate: new Date(2023, 3),
+    logo: LogoTeresol,
+    logoAlt: 'Teresol',
+    position: 'Software Design Engineer',
+    startDate: new Date(2023, 10), // November 2023
+    endDate: new Date(2024, 2), // March 2024
+    technologies: ['Vue.js', 'Node.js', 'XState', 'JavaScript', 'Postman'],
     summary: [
-      'Facilitated communication for 10,000 individuals by developing an AI-based app translating sign language and voice.',
-      'Developed a React-based dashboard to manage, list, and train language conversion models for enhanced accuracy and usability.',
-      'Leveraged Media pipe Holistic libraries to accurately capture user gestures for real-time sign language recognition.',
-      'Reduced server costs by 25% by optimizing resource allocation and leveraging cloud solutions.',
-      'Improved deployment speed by 50% by introducing automated CI/CD pipelines and optimizing workflows.'
+      'Reverse-engineered legacy Java flows and translated them into modern FSMs using XState, mapping UI actions to backend APIs.',
+      'Built Vue.js components bound to FSM context data, tested APIs in Postman, and integrated responses into FSM logic.',
+      'Optimized transaction reliability with proper error handling, implemented transaction flows with event handling and API triggers.',
+      'Modernized legacy banking app into structured FSM system, reducing errors and improving frontend/backend integration.',
+      'Gained expertise in finite state modeling and API integration, enabling faster feature integration in the banking platform.',
+    ],
+  },
+  {
+    logo: LogoQLU,
+    logoAlt: 'QLU.ai',
+    position: 'Full Stack Engineer',
+    startDate: new Date(2023, 6), // July 2023
+    endDate: new Date(2023, 10), // November 2023
+    technologies: ['React', 'Electron', 'Node.js', 'Docker'],
+    summary: [
+      'Built MVP GPU-lending platform end-to-end, enabling organizations to share and access GPUs securely via SSH desktop interface.',
+      'Developed Electron desktop app with Docker-based environments and organization-level access system for shared GPUs.',
+      'Implemented secure SSH tunneling and Docker containers, resolving connection issues and developing real-time GPU availability workflows.',
+      'Delivered fully functional MVP prototype, demonstrating technical ownership and full-stack expertise.',
+      'Gained expertise in desktop app development, container management, and secure remote access solutions.',
+    ],
+  },
+  {
+    logo: LogoContract,
+    logoAlt: 'Contract.pk',
+    position: 'Engineering Intern',
+    startDate: new Date(2022, 7), // August 2022
+    endDate: new Date(2022, 8), // September 2022
+    technologies: ['React', 'Next.js', 'Firebase', 'Google Gemini AI', 'Vercel'],
+    summary: [
+      'Built and deployed AI-powered legal consultation platform with Google/Email authentication and protected routes.',
+      'Developed chatbot-style AI queries using Google Gemini AI with PPC/Constitution references and Firestore integration.',
+      'Created community dashboard for legal discussions and structured 40 requirements in Firestore dashboard.',
+      'Enabled users in Pakistan to access instant legal consultation through AI-powered queries with PPC/Constitution references, especially helpful in remote areas.',
+      'Gained experience in AI product design, authentication flows, and scalable Firebase systems.',
+    ],
+  },
+  {
+    logo: LogoFFBL,
+    logoAlt: 'Fauji Fertilizer Bin Qasim Ltd. (FFBL)',
+    position: 'IT Intern',
+    startDate: new Date(2022, 6), // July 2022
+    endDate: new Date(2022, 7), // August 2022
+    technologies: ['SAP', 'ABAP', 'Qlik Sense', 'HTML', 'CSS', 'JavaScript', 'WordPress', 'PHP'],
+    summary: [
+      'Received training in Network & Security, Backups & Support, WordPress development, PHP scripting, and data center operations.',
+      'Developed and customized SAP ABAP programs to filter and organize enterprise data from multiple database tables.',
+      'Created data visualizations in Qlik Sense to generate business reports and dashboards for internal teams.',
+      'Built internal websites using HTML, CSS, and JavaScript for ICT department needs.',
+      'Gained foundation in enterprise software systems (SAP, ERP), data analytics, and networking.',
     ],
   },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: 'Talk Motion',
+    name: 'Sound of Silence (FYP)',
     description:
-      'Talk-motion brings the world of Deaf and speaking people together, reuniting families, friends and colleagues with the power of artificial intelligence.',
-    url: 'https://talk-motion.com',
-    previewImage: ProjectTalkMotion,
+      'A web and mobile app that performs automated lipreading using machine learning. Converts silent or noisy speech videos into clear audio in real time for accessibility and communication use cases.',
+    url: '', // No link available yet
+    previewImage: ProjectSoundOfSilence,
     technologies: [
+      'Flutter',
+      'React.js',
+      'Python',
+      'Flask',
+      'Machine Learning',
+      'Computer Vision',
+    ],
+  },
+  {
+    name: 'Driver\'s Drowsiness Detection System',
+    description:
+      'An AI-powered real-time system that monitors eye movement through a webcam to detect driver fatigue and trigger instant alerts, helping prevent road accidents.',
+    url: 'https://real-time-drowsiness-detection.vercel.app/',
+    previewImage: ProjectDrowsiness,
+    technologies: [
+      'Next.js',
       'React',
-      'Redux',
-      'Ant Design',
-      'Stripe',
-      'Express.js',
-      'PostgreSQL',
-      'Styled Components',
+      'CNN',
+      'Computer Vision',
+      'Tailwind CSS',
     ],
   },
   {
     name: 'Black Seal Protection',
-    description: 'Mobile security platform providing comprehensive SIM protection tools, device security analysis, and breach monitoring to reduce account compromise risks for users.',
+    description:
+      'A mobile security app that offers SIM protection, device security analysis, and breach monitoring to safeguard users from account compromises and privacy threats.',
     url: 'https://apps.apple.com/us/app/black-seal-protection/id6742754502',
     previewImage: ProjectBlackSeal,
     technologies: [
@@ -229,72 +291,46 @@ export const PROJECTS: ProjectDetails[] = [
     ],
   },
   {
-    name: 'VisaBookings',
+    name: 'LawBot',
     description:
-      'Platform for booking Schengen visa flight reservations, travel insurance, and hotel bookings with integrated payment processing and real-time pricing for travelers.',
-    url: 'https://visabookings.com/',
-    previewImage: ProjectVisaBookings,
+      'An AI-powered legal assistant that provides instant legal guidance based on Pakistan\'s Penal Code and Constitution, making legal help accessible to everyone, especially in remote areas.',
+    url: 'https://law-bot-final-website.vercel.app/',
+    previewImage: ProjectLawBot,
     technologies: [
-      'Node.js',
-      'PostgreSQL',
-      'Stripe',
-      'AWS',
+      'React',
+      'Firebase',
+      'Google Gemini AI',
+      'React Router',
+      'Vercel',
     ],
   },
   {
-    name: 'WAF Automation',
+    name: 'N8N Flow – Google Ads Optimization',
     description:
-      'A service platform to build custom AI solutions in computer vision and VR with the platform best-in-class integrations.',
-    url: 'https://wafautomation.com/',
-    previewImage: ProjectWAF,
+      'An automated n8n workflow that analyzes Google Ads performance data using LLMs and applies optimization changes, reducing manual review time and improving campaign efficiency.',
+    url: '', // No link available yet
+    previewImage: ProjectGoogleAds,
     technologies: [
-      'Angular',
-      'RxJS',
-      'Typescript',
-      'Booking Services',
-      'Email Automation',
-      'Tailwindcss',
-      'Express.js',
-      'PostgreSQL',
+      'N8N',
+      'GCP',
+      'BigQuery',
+      'Cloud Run',
+      'LLM',
+      'Google Ads API',
     ],
   },
   {
-    name: 'WorkConnect',
+    name: 'N8N Flow – Blog Generator',
     description:
-      'A comprehensive cross-platform job marketplace connecting clients with skilled workers, featuring real-time messaging, AI document verification, and secure payment processing across web and mobile interfaces.',
-    url: 'https://workconnect-web-sf58.vercel.app/',
-    previewImage: ProjectWorkConnect,
+      'An AI-driven content automation system that generates blogs with images, sends them to Slack for approval, and iterates based on user feedback — streamlining content creation.',
+    url: '', // No link available yet
+    previewImage: ProjectAIContentWriter,
     technologies: [
-      'Next.js',
-      'React Native',
-      'Django REST Framework',
-      'PostgreSQL',
-      'WebSocket',
-      'Stripe',
+      'N8N',
+      'LLM',
+      'Image Generation',
+      'Slack API',
+      'Workflow Automation',
     ],
-  },
-];
-
-export const TESTIMONIALS: TestimonialDetails[] = [
-  {
-    personName: 'Osama Yawar',
-    personAvatar: AvatarOsama,
-    title: 'Head of Engineering - Efani',
-    testimonial:
-      'An ambitious team player to work with. He has been a great help in solving complex problems. His dedication, expertise and habit of taking ownership added value to our company. Highly recommended !!',
-  },
-  {
-    personName: 'Vincent Ochs',
-    personAvatar: AvatarVincent,
-    title: 'Founder - Kairos',
-    testimonial:
-      `This guy knows exactly what he is been doing and also contributes to the task by providing his own solutions and thoughts. He works independently and made sure I can follow on the way along. I can suggest anyone to work with him`,
-  },
-  {
-    personName: 'Gabriel Tannous',
-    personAvatar: AvatarGabriel,
-    title: 'Lead Software Engineer - Lumachain',
-    testimonial:
-      'Excellent collaboration throughout the entire project. Tayyab consistently delivered high-quality work on time and maintained clear communication. His professionalism and reliability make him someone I would definitely work with again on future projects.',
   },
 ];

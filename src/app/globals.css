@@ -2,33 +2,374 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ref :: https://twitter.com/steventey/status/1677339375645126659 */
+/* Scroll optimization */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* GPU acceleration for smooth scrolling */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Cosmic Space Theme - Journey Through the Stars */
 :root {
-  --app-gray-default: 255 255 255;
-  --app-gray-50: 249 250 251;
-  --app-gray-100: 243 244 246;
-  --app-gray-200: 229 231 235;
-  --app-gray-300: 209 213 219;
-  --app-gray-400: 156 163 175;
-  --app-gray-500: 107 114 128;
-  --app-gray-600: 75 85 99;
-  --app-gray-700: 55 65 81;
-  --app-gray-800: 31 41 55;
-  --app-gray-900: 17 24 39;
-  --app-gray-950: 3 7 18;
+  --app-gray-default: 10 14 39;
+  --app-gray-50: 240 244 255;
+  --app-gray-100: 26 31 58;
+  --app-gray-200: 37 43 77;
+  --app-gray-300: 47 54 96;
+  --app-gray-400: 58 66 115;
+  --app-gray-500: 69 77 134;
+  --app-gray-600: 80 88 153;
+  --app-gray-700: 91 99 172;
+  --app-gray-800: 102 110 191;
+  --app-gray-900: 113 121 210;
+  --app-gray-950: 139 147 229;
 }
 
 .dark {
-  --app-gray-default: 3 7 18;
-  --app-gray-50: 17 24 39;
-  --app-gray-100: 31 41 55;
-  --app-gray-200: 55 65 81;
-  --app-gray-300: 75 85 99;
-  --app-gray-400: 107 114 128;
-  --app-gray-500: 156 163 175;
-  --app-gray-600: 209 213 219;
-  --app-gray-700: 229 231 235;
-  --app-gray-800: 243 244 246;
-  --app-gray-900: 249 250 251;
-  --app-gray-950: 255 255 255;
+  --app-gray-default: 10 14 39;
+  --app-gray-50: 240 244 255;
+  --app-gray-100: 26 31 58;
+  --app-gray-200: 37 43 77;
+  --app-gray-300: 47 54 96;
+  --app-gray-400: 58 66 115;
+  --app-gray-500: 69 77 134;
+  --app-gray-600: 80 88 153;
+  --app-gray-700: 91 99 172;
+  --app-gray-800: 102 110 191;
+  --app-gray-900: 113 121 210;
+  --app-gray-950: 139 147 229;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000 0%, #0a0a1f 20%, #1a0a2e 40%, #0a0a1f 60%, #000000 80%, #000000 100%);
+  position: relative;
+  overflow-x: hidden;
+  cursor: auto;
+  min-height: 100vh;
+}
+
+/* Performance optimization */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Removed background glow for performance */
+
+/* Removed grid for performance */
+/* body::after removed - performance optimization */
+
+/* Space Particles - Small floating stars */
+.space-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(79, 70, 229, 0.4);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Removed old code-particle styles - replaced with cosmic particles */
+
+/* Shooting Stars */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8), transparent);
+  pointer-events: none;
+  z-index: 2;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.6), 0 0 20px rgba(124, 58, 237, 0.4);
+  will-change: transform, opacity;
+}
+
+/* Larger Space Particles */
+.stellar-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 
+    0 0 6px rgba(79, 70, 229, 0.6),
+    0 0 12px rgba(124, 58, 237, 0.4),
+    0 0 18px rgba(109, 40, 217, 0.3);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for better performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes spaceParticle {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(20px, -20px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-10px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-30px) translateX(-15px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatPlanet {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes mistFlow {
+  0%, 100% { 
+    opacity: 0.15;
+    transform: translateX(0);
+  }
+  50% { 
+    opacity: 0.25;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+}
+
+.digital-firefly:nth-child(1) { --tx: 50; --ty: 80; animation-delay: 0s; }
+.digital-firefly:nth-child(2) { --tx: -40; --ty: 70; animation-delay: 2s; left: 60%; }
+.digital-firefly:nth-child(3) { --tx: 60; --ty: 90; animation-delay: 4s; left: 30%; }
+.digital-firefly:nth-child(4) { --tx: -50; --ty: 75; animation-delay: 1s; left: 80%; }
+.digital-firefly:nth-child(5) { --tx: 45; --ty: 85; animation-delay: 6s; left: 15%; }
+
+/* Glow effect on hover */
+.glow-on-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  text-shadow: 
+    0 0 10px rgba(79, 70, 229, 0.6), 
+    0 0 20px rgba(124, 58, 237, 0.4),
+    0 0 30px rgba(109, 40, 217, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Removed terminal styles - using cosmic theme */
+
+/* Card glow effect */
+.card-glow {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, transparent, rgba(79, 70, 229, 0.3), transparent);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7c3aed, #6d28d9);
+}
+
+/* Forest fog effect */
+@keyframes fog {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(13, 27, 42, 0.1) 25%, 
+    rgba(13, 27, 42, 0.2) 50%, 
+    rgba(13, 27, 42, 0.1) 75%, 
+    transparent 100%);
+  animation: fog 30s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(79, 70, 229, 0.3);
+  color: #f0f4ff;
+}
+
+/* Vertical Timeline Custom Styles */
+.vertical-timeline-element-content {
+  box-shadow: 0 4px 20px rgba(79, 70, 229, 0.2) !important;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.5) !important;
+}
+
+.vertical-timeline::before {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+@media only screen and (max-width: 1169px) {
+  .vertical-timeline-element-icon {
+    left: 0 !important;
+  }
+  
+  .vertical-timeline-element-content {
+    width: 90% !important;
+    margin-left: 10% !important;
+  }
+  
+  .vertical-timeline-element-content::before {
+    left: 15% !important;
+    border-color: transparent rgba(30, 27, 75, 0.6) transparent transparent !important;
+  }
 }

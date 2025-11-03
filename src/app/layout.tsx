@@ -9,29 +9,39 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Muhammad Tayyab | Full Stack Developer From Peshawar, Pakistan.';
+const title = 'Shireen Khan | Full-Stack Software Engineer From Islamabad, Pakistan';
 const description =
-  'A dedicated Full Stack Developer who specializes in building web applications using React.js, Angular & Node.js, from Peshawar, Pakistan.';
-const url = 'https://iamtayyab.com';
+  'A dedicated Full-Stack Software Engineer specializing in React.js, Next.js, Angular & Node.js. Building scalable, innovative web applications with expertise in GCP, PostgreSQL, and modern frontend frameworks.';
+const url = 'https://iamshireen.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
   keywords: [
-    'Software Developer',
+    'Software Engineer',
     'Full Stack Developer',
-    'Muhammad Tayyab',
-    'Tayyab',
+    'Shireen Khan',
+    'Full-Stack Engineer',
     'Web Developer',
-    'JavaScript Developer',
+    'React Developer',
+    'Next.js Developer',
+    'Angular Developer',
+    'Node.js Developer',
+    'JavaScript',
+    'TypeScript',
     'React',
-    'Node'
+    'Next.js',
+    'Node',
+    'GCP',
+    'PostgreSQL',
+    'NUST',
+    'Efani',
   ],
-  creator: 'Muhammad Tayyab',
+  creator: 'Shireen Khan',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#0a1f1a' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a1f1a' },
   ],
   openGraph: {
     type: 'website',
@@ -41,7 +51,7 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: '/images/open-graph-tayyab.png',
+        url: '/images/open-graph-shireen.png',
       },
     ],
   },
@@ -49,8 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    creator: '@Tayyab_3411',
-    images: '/images/open-graph-tayyab.png',
+    images: '/images/open-graph-shireen.png',
   },
   icons: {
     icon: '/favicon.ico',
@@ -85,11 +94,13 @@ export default function RootLayout({
           </Script>
         </head>
       ) : null}
-      <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
+      <body className={`${inter.className} bg-cosmic text-gray-700 antialiased`} suppressHydrationWarning>
         <Providers>
-          <Header />
-          <main className="flex min-h-screen w-full flex-col">{children}</main>
-          <Footer />
+          <div className="relative z-[20]">
+            <Header />
+            <main className="flex min-h-screen w-full flex-col">{children}</main>
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>
