@@ -9,7 +9,7 @@ import * as random from 'maath/random/dist/maath-random.esm';
 const StarField = (props: any) => {
   const ref = useRef<any>();
   
-  // Generate sphere data - using useMemo to ensure consistency
+  // Pre-generate sphere data immediately for instant load
   const sphere = useMemo(() => {
     try {
       // Slightly reduced for less congestion - 6500 stars with wider radius
@@ -89,19 +89,11 @@ const StarField = (props: any) => {
   );
 };
 
-const Loader = () => {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-stellar-indigo/30 border-t-stellar-indigo rounded-full animate-spin" />
-    </div>
-  );
-};
-
 const StarCanvas = () => {
   return (
     <div className="w-full h-full absolute inset-0 z-0 pointer-events-none">
       <Canvas camera={{ position: [0, 0, 1] }}>
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={null}>
           <StarField />
         </Suspense>
         <Preload all />

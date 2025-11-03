@@ -9,13 +9,7 @@ import Container from '@/components/layout/container';
 
 const StarCanvas = dynamic(() => import('@/components/general/starfield'), {
   ssr: false,
-  loading: () => (
-    <div className="w-full h-full absolute inset-0 z-0 pointer-events-none">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-stellar-indigo/30 border-t-stellar-indigo rounded-full animate-spin" />
-      </div>
-    </div>
-  ),
+  loading: () => null, // No loader - stars will appear directly
 });
 
 const HeroSection = () => {
